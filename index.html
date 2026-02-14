@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivoy City</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    /*background:#2196F3;*/
+}
+/* ADD BLUR BACKGROUND IMAGE */
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("img2.jpeg") no-repeat center center/cover;
+    filter:blur(8px);
+    z-index:-1;
+}
+
+.navbar{
+    background:#1976D2;
+    padding:12px;
+    display:flex;
+    justify-content:flex-end;
+    position:relative;
+}
+
+.menu-icon{
+    width:30px;
+    cursor:pointer;
+}
+
+.menu-icon div{
+    height:4px;
+    background:white;
+    margin:6px 0;
+    border-radius:2px;
+}
+
+.menu{
+    display:none;
+    position:absolute;
+    right:15px;
+    top:55px;
+    background:#f1f1f1;
+    width:200px;
+    border-radius:6px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.menu a{
+    display:block;
+    padding:12px;
+    text-decoration:none;
+    color:black;
+}
+
+.menu a:hover{
+    background:#ddd;
+}
+
+.container{
+    width:90%;
+    margin:0 auto;
+    /*background:#1f9eda;*/
+    padding-bottom:30px;
+}
+
+.logo{
+    width:220px;
+    height:200px;
+    border-radius:30%;
+    border:2px solid white;
+    display:block;
+    margin:40px auto 10px auto;
+}
+
+h1{
+    text-align:center;
+    color:white;
+    font-size:38px;
+    margin:10px 0 0 0;
+}
+
+.tagline{
+    text-align:center;
+    color:white;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+.description{
+    background:#1467aa;
+    padding:20px;
+    margin:20px;
+    border-radius:8px;
+    color:white;
+}
+
+.description h3{
+    text-align:center;
+    margin-top:0;
+}
+
+.service-btn{
+    display:block;
+    margin:30px auto;
+    height:50px;
+    width:200px;
+    background:#1976D2;
+    border:none;
+    color:white;
+    font-size:18px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.service-btn:hover{
+    background:#0d47a1;
+}
+
+.service-box{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+}
+
+.service-box p{
+    font-size:15px;
+    line-height:1.6;
+    color:#333;
+}
+
+.footer{
+    background:#ffffff;
+    padding:20px;
+    margin:20px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.footer a{
+    text-decoration:none;
+    color:#1976D2;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="menu" id="menu">
+        <a href="#">Real Estate Developer</a>
+        <a href="#">Property Management</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <img src="shivoyimg.jpeg" class="logo" alt="Shivoy City Logo">
+
+    <h1>Shivoy City</h1>
+    <p class="tagline">Where Dreams Find an Address..</p>
+
+    <div class="description">
+        <h3>Description</h3>
+        <p>
+        Established in 2021, Shivoy City contributes to the real estate sector with
+        commitment to quality, transparency, and long-term value.
+        Under the leadership of Savitri Mishra, the company develops reliable
+        residential and commercial projects and provides dependable property management services.
+        <br><br>
+        We believe in building not just properties, but lasting relationships based on trust and integrity.
+        </p>
+    </div>
+
+    <a href="tel:+916387750743">
+        <button class="service-btn">Contact Us</button>
+    </a>
+
+    <!-- SERVICES -->
+
+    <div class="service-box">
+        <h2>Real Estate Developer</h2>
+        <p>
+            We develop high-quality residential and commercial properties
+            in prime locations with clear documentation and secure investment value.
+        </p>
+    </div>
+
+    <div class="service-box">
+        <h2>Property Management</h2>
+        <p>
+            Complete property care including maintenance, tenant coordination,
+            and asset protection to ensure stress-free ownership.
+        </p>
+    </div>
+
+    <!-- WHY CHOOSE US -->
+
+    <div class="service-box">
+        <h2>Why Choose Shivoy City?</h2>
+        <p>✔ Transparent Deals</p>
+        <p>✔ Clear Legal Documentation</p>
+        <p>✔ Prime Locations</p>
+        <p>✔ Affordable Investment Options</p>
+        <p>✔ Customer-First Approach</p>
+    </div>
+
+    <!-- OUR PROJECTS -->
+
+    <div class="service-box">
+        <h2>Our Projects</h2>
+        <p>• Residential Plot Developments</p>
+        <p>• Commercial Shops & Office Spaces</p>
+        <p>• Land Development & Layout Planning</p>
+    </div>
+
+    <!-- TESTIMONIALS -->
+
+    <div class="service-box">
+        <h2>What Our Clients Say</h2>
+        <p>"Very transparent process and excellent support." – Happy Client</p>
+        <p>"Safe investment and smooth documentation." – Property Buyer</p>
+    </div>
+
+    <!-- LOCATION -->
+
+    <div class="service-box">
+        <h2>Our Location</h2>
+        <p>Serving in your city and nearby areas with trusted real estate solutions.</p>
+    </div>
+
+    <!-- CALL TO ACTION -->
+
+    <div class="service-box">
+        <h2>Ready to Invest?</h2>
+        <p>
+            Contact Shivoy City today and secure your future with trusted
+            real estate solutions designed for long-term growth.
+        </p>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <p><strong>Owner:</strong> Savitri Mishra</p>
+        <p><strong>Contact:</strong> 
+            <a href="tel:+919839338962">+91 9839338962</a>
+        </p>
+        <p>
+            <a href="https://wa.me/919839338962">Chat on WhatsApp</a>
+        </p>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+</script>
+
+</body>
+</html>
